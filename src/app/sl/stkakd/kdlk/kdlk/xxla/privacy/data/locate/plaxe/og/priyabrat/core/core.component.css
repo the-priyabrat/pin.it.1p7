@@ -1,0 +1,13 @@
+:host {
+    background-color: white;
+    align-items: center;
+    display: flex;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.loader {
+    height: 85px;
+}
