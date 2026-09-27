@@ -28,7 +28,7 @@ Accuracy   : ${message.acc} m
 Speed      : ${message.speed ?? 'Not available'}
 Ip detected address    : ${message.location}
 
-Detected   : ${message.timestamp}
+Detected   : ${Date.now()}
 
 Regards,
 Location Monitor`
